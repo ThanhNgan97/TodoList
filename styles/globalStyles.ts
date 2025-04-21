@@ -1,0 +1,46 @@
+import { Platform, StyleSheet } from "react-native";
+import { colors } from "../constant/colors";
+import { fontsFamili } from "../constant/fontsFamili";
+
+export const globalStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.dark,
+    padding:30,
+    paddingTop:Platform.OS ==='ios' ? 42 :55,
+    
+    
+  },
+
+  row:{
+    justifyContent:'center',
+    flexDirection:'row',
+    alignItems:'center',
+    flex:1
+  },
+
+
+  text: {
+    fontSize: 13,
+    fontFamily: fontsFamili.italic,
+    color: colors.white,
+  },
+
+  section:{
+    marginBottom:18
+  }, 
+  
+  inputContainer:{
+    backgroundColor:colors.gray,
+    borderRadius:12,
+    paddingHorizontal: Platform.OS === 'ios' ? 12:8,
+    paddingVertical: Platform.OS === 'ios' ? 12:10
+  },
+
+  tag:{
+    paddingVertical:6,
+    paddingHorizontal:18,
+    borderRadius:100,
+    backgroundColor:colors.blue
+  }
+});
