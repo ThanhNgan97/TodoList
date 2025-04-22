@@ -42,5 +42,19 @@ export const globalStyles = StyleSheet.create({
     paddingHorizontal:18,
     borderRadius:100,
     backgroundColor:colors.blue
-  }
+  },
+  card:{
+    // padding:12,
+    borderRadius:12
+  },
+  iconContainer:{
+    width:40, 
+    height:40, 
+    borderRadius:100, 
+    backgroundColor:"rgba(0,0,0,0.15)", 
+    justifyContent:'center', 
+    alignItems:'center',
+    marginBottom:16
+  },
+  
 });

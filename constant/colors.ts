@@ -7,5 +7,8 @@ export const colors = {
   back: '#000000',
   gray: '#808080',
   silver: '#C0C0C0',
-  blue: '#392dd5'
+  blue: '#392dd5',
+  gray2:'#696B6F80',
+  text:'#fafafa'
+
 };

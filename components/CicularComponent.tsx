@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import CircularProgress from 'react-native-circular-progress-indicator';
+import { colors } from '../constant/colors';
+import { fontsFamili } from '../constant/fontsFamili';
 
 
 interface Props {
@@ -12,7 +14,18 @@ interface Props {
 const CicularComponent = (props:Props) => {
     const {color, value, maxValue} = props;
     return (
-        <CircularProgress value = {value}/>
+        <CircularProgress 
+            value = {value} 
+            title ={`${value}%`} 
+            showProgressValue={false}
+            activeStrokeColor={color ?? colors.blue}
+            inActiveStrokeColor={'#3C444A'} 
+            titleColor={colors.silver}
+            titleFontSize={24}
+            titleStyle={{
+                fontFamily:fontsFamili.semibold,
+            }}
+            />
     );
 }
 

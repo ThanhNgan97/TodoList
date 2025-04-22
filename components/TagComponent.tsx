@@ -27,8 +27,9 @@ const TagComponent = (props:Props) => {
             globalStyles.tag, 
             tagStyles, 
             {backgroundColor: color ?? colors.blue},
+            
         ]}>
-            <TextComponent text={text} styles = {textStyles}>
+            <TextComponent text={text} styles = {textStyles} >
 
             </TextComponent>
         </TouchableOpacity>
