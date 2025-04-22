@@ -6,7 +6,6 @@ export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.dark,
-    padding:30,
     paddingTop:Platform.OS ==='ios' ? 42 :55,
     
     
@@ -27,7 +26,8 @@ export const globalStyles = StyleSheet.create({
   },
 
   section:{
-    marginBottom:18
+    marginBottom:16,
+    paddingHorizontal:20
   }, 
   
   inputContainer:{
@@ -56,5 +56,8 @@ export const globalStyles = StyleSheet.create({
     alignItems:'center',
     marginBottom:16
   },
+  scrolView:{
+    flex:1
+  }
   
 });

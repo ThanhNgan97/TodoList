@@ -8,7 +8,7 @@ import { useCustomFonts } from '../hooks/useCustomFonts';
 import TitleComponent from '../components/TitleComponent';
 import { globalStyles } from '../styles/globalStyles';
 import CardComponent from '../components/CardComponent';
-import { Edit2, Element4, 
+import { Add, Edit2, Element4, 
     Notification, 
     SearchFavorite, 
     SearchNormal1, 
@@ -20,6 +20,8 @@ import SpaceComponent from '../components/SpaceComponent';
 import CicularComponent from '../components/CicularComponent';
 import CardmageComponent from '../components/CardmageComponent';
 import AvataGroup from '../components/AvataGroup';
+import ProgressBarComponent from '../components/ProgressBarComponent';
+import ScrollContainer from '../components/ScrollContainer';
 
 const HomeScreen = () => {
 
@@ -30,7 +32,8 @@ const HomeScreen = () => {
   }
 
   return (
-    <Container>
+    <View style={{flex:1}}>
+      <ScrollContainer>
       <SectionConponent>
         <RowComponent justify="space-between">
           <Element4 size = {24}  color ={colors.silver}/>
@@ -86,14 +89,18 @@ const HomeScreen = () => {
                 </TouchableOpacity>
                 <TitleComponent text='UX Design'/>
                 <TextComponent text ='Task managents moble app' size={13}/>
-
                 <View style={{marginVertical:28}}>
                   <AvataGroup/>
+                  <ProgressBarComponent 
+                    percent={70} 
+                    color="#0AACFF"
+                    size = 'large'
+                    />
                 </View>
                 <TextComponent 
                   text='Due, 2023 Match 03'
                   size={12}
-                   color={colors.gray}
+                   color={colors.silver}
                   />
               </CardmageComponent>
           </View>
@@ -109,6 +116,11 @@ const HomeScreen = () => {
                 </TouchableOpacity>
                 <TitleComponent text='API Payment'/>
                 <AvataGroup/>
+                <ProgressBarComponent 
+                  percent={40} 
+                  color="#A2F068" 
+                  size = 'large'/>
+                
               </CardmageComponent>
 
 
@@ -129,7 +141,54 @@ const HomeScreen = () => {
           
         </RowComponent>
       </SectionConponent>
-    </Container>
+      <SectionConponent>
+        <TitleComponent text="Urgents tasks"/>
+        <CardComponent>
+          <RowComponent>
+
+            <CicularComponent value={40} radius={40} titleFontSize={15}/>
+            <View style={{
+                flex:1, 
+                justifyContent:'center',
+                paddingLeft:12
+
+                }}>
+              <TextComponent text = 'Title of task'/>
+            </View>
+          </RowComponent>
+        </CardComponent>
+      </SectionConponent>
+      </ScrollContainer>
+
+      <View style={{
+          position:'absolute',
+          bottom:0,
+          left:0,
+          right:0,
+          padding:20, 
+          justifyContent:'center',
+          alignItems:'center'
+        }}>
+          <TouchableOpacity 
+          activeOpacity={1}
+          style ={[
+              globalStyles.row, 
+              {
+                backgroundColor:colors.blue,
+                padding:10,
+                borderRadius:100,
+                width:'80%',
+                justifyContent:'center',
+                alignItems:'center'
+              }
+             
+
+              ]}>
+            <TextComponent text='Add new task' flex={0}/>
+            <Add size={22} color={colors.white}/>
+          </TouchableOpacity>
+        </View>
+    </View>
     
   )
         

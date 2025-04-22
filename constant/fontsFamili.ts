@@ -1,7 +1,7 @@
 export const fontsFamili = {
-  bold: 'Bold',
-  italic: 'Italic',
-  medium: 'Medium',
-  semibold: 'SemiBold',
-  regular: 'Regular',
+  bold: 'bold',       // Phải khớp với tên đã đăng ký trong Font.loadAsync
+  italic: 'italic',
+  medium: 'medium',
+  semibold: 'semibold',
+  regular: 'regular',
 };

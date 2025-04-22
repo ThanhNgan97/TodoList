@@ -8,20 +8,25 @@ import { fontsFamili } from '../constant/fontsFamili';
 interface Props {
     color?:string,
     value?:number,
-    maxValue?:number
+    maxValue?:number,
+    radius?:number,
+    titleFontSize?: number; 
 }
 
 const CicularComponent = (props:Props) => {
-    const {color, value, maxValue} = props;
+    const {color, value, maxValue, radius, titleFontSize} = props;
     return (
         <CircularProgress 
             value = {value} 
-            title ={`${value}%`} 
+            title ={`${value}%`}
+            radius={radius ?? 46} 
             showProgressValue={false}
             activeStrokeColor={color ?? colors.blue}
             inActiveStrokeColor={'#3C444A'} 
             titleColor={colors.silver}
-            titleFontSize={24}
+            activeStrokeWidth={14}
+            inActiveStrokeWidth={14}
+            titleFontSize={titleFontSize ?? 20}
             titleStyle={{
                 fontFamily:fontsFamili.semibold,
             }}
