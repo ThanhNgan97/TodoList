@@ -23,7 +23,7 @@ import AvataGroup from '../components/AvataGroup';
 import ProgressBarComponent from '../components/ProgressBarComponent';
 import ScrollContainer from '../components/ScrollContainer';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}:any) => {
 
   const fontsLoaded = useCustomFonts();
 
@@ -169,7 +169,8 @@ const HomeScreen = () => {
           justifyContent:'center',
           alignItems:'center'
         }}>
-          <TouchableOpacity 
+          <TouchableOpacity
+          onPress={() => navigation.navigate('AddNewTask')}
           activeOpacity={1}
           style ={[
               globalStyles.row, 
